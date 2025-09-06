@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yugesh Nunna - Home</title>
+    <link rel="stylesheet" href="newcss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+    /* Bubble Background */
+    .bubbles {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+      background: transparent;
+    }
+
+    .bubble {
+      position: absolute;
+      bottom: -100px;
+      border-radius: 50%;
+      background: rgba(52, 152, 219, 0.6);
+      opacity: 0.95;
+      filter: blur(6px);
+      animation: rise linear infinite;
+    }
+
+    @keyframes rise {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-120vh) scale(1.4);
+        opacity: 0;
+      }
+    }
+
+    .bubble.b1 {
+      left: 10%;
+      width: 25px;
+      height: 25px;
+      animation-duration: 12s;
+    }
+    .bubble.b2 {
+      left: 25%;
+      width: 15px;
+      height: 15px;
+      animation-duration: 10s;
+    }
+    .bubble.b3 {
+      left: 40%;
+      width: 30px;
+      height: 30px;
+      animation-duration: 18s;
+    }
+    .bubble.b4 {
+      left: 55%;
+      width: 20px;
+      height: 20px;
+      animation-duration: 14s;
+    }
+    .bubble.b5 {
+      left: 70%;
+      width: 18px;
+      height: 18px;
+      animation-duration: 16s;
+    }
+    .bubble.b6 {
+      left: 85%;
+      width: 22px;
+      height: 22px;
+      animation-duration: 20s;
+    }
+
+    /* Content Styling */
+    .page-title {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 3rem;
+      color: #b74b4b;
+    }
+
+    .radial-box {
+      background: radial-gradient(circle at top left, #1a1a1a, #000);
+      border: 2px solid #b74b4b;
+      border-radius: 2rem;
+      padding: 2rem;
+      margin: 2rem auto;
+      max-width: 700px;
+      box-shadow: 0 0 20px #b74b4b;
+      transition: 0.3s ease;
+      text-align: center;
+    }
+
+    .radial-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 35px #b74b4b;
+    }
+
+    .radial-box h2 {
+      color: #b74b4b;
+      margin-bottom: 1rem;
+    }
+
+    .radial-box p {
+      font-size: 1.6rem;
+      color: white;
+    }
+
+    /* Specific Styling for the Experience Content */
+    .radial-box h2 {
+      font-size: 1.5 rem;
+      color: #3498db;
+    }
+
+    .radial-box p {
+      font-size: 1.6rem;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+    <!-- Floating Bubbles (same as your Contact page) -->
+  <div class="bubbles" aria-hidden="true">
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+    <div class="bubble b4"></div>
+    <div class="bubble b5"></div>
+    <div class="bubble b6"></div>
+  </div>
+    
+    <header>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="index.html" class="logo">Yugesh Nunna</a>
+        
+        <!-- Hamburger menu (hidden on desktop by CSS) -->
+        <div class="menu-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+        </div>
+        
+        <!-- Navbar -->
+        <nav id="navbar">
+            <a href="index.html" class="active">Home</a>
+            <a href="services.html">Services</a>
+            <a href="skills.html">Skills</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="home-img">
+            <img src="./myimage.jpg" alt="Profile Picture">
+            
+        </div>
+        
+        <div class="home-content">
+            <h1>Hi, This's <span>Yugesh</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>
+                Passionate Software Engineer with experience in building scalable applications, 
+                problem-solving, and delivering optimized solutions.
+            </p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/yugesh-nunna-b006841ba" target="_blank"><abbr title="LinkedIn"><i class="fa-brands fa-linkedin"></i></abbr></a>
+                <a href="https://github.com/" target="_blank"><abbr title="GitHub"><i class="fa-brands fa-github"></i></abbr></a>
+                <a href="#" target="_blank"><abbr title="Twitter"><i class="fa-brands fa-x-twitter"></i></abbr></a>
+                <a href="#" target="_blank"><abbr title="Instagram"><i class="fa-brands fa-instagram"></i></abbr></a>
+            </div>
+            <a href="contact.html" class="btn">Hire me</a>
+        </div>
+    </section>
+
+    <!-- Script for hamburger toggle -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navbar = document.getElementById('navbar');
+
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
